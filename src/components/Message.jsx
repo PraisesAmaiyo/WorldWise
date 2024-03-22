@@ -2,9 +2,9 @@ import styles from './Message.module.css';
 
 function Message({ message }) {
   return (
-    <span className={styles.message}>
+    <p className={styles.message}>
       <span role="img">👋</span> {message}
-    </span>
+    </p>
   );
 }
 
