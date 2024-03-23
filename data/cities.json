@@ -35,6 +35,43 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
+    },
+
+    {
+      "cityName": "Camps-Saint-Mathurin-Leobazel",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2024-03-23T14:31:17.732Z",
+      "notes": "createCity",
+      "position": {
+        "lat": "44.98077884838713",
+        "lng": "1.9318125583134151"
+      },
+      "id": 98443199
+    },
+    {
+      "cityName": "Ohimini",
+      "country": "Nigeria",
+      "emoji": "🇳🇬",
+      "date": "2024-03-23T14:34:58.775Z",
+      "notes": "",
+      "position": {
+        "lat": "7.198951379346039",
+        "lng": "8.064854418822286"
+      },
+      "id": 98443202
+    },
+    {
+      "cityName": "Timbuktu",
+      "country": "Mali",
+      "emoji": "🇲🇱",
+      "date": "2024-03-23T14:49:27.265Z",
+      "notes": "Hello",
+      "position": {
+        "lat": "17.14713427992463",
+        "lng": "-2.837569317327242"
+      },
+      "id": 98443206
     }
   ]
 }
