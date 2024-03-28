@@ -4,13 +4,16 @@ import PageNav from '../components/PageNav';
 import { useAuth } from '../contexts/FakeAuthContext';
 import Button from '../components/Button';
 import { useNavigate } from 'react-router-dom';
+import Message from '../components/Message';
 
 export default function Login() {
   // PRE-FILL FOR DEV PURPOSES
   const [email, setEmail] = useState('jack@example.com');
-  const [password, setPassword] = useState('qwerty');
+  const [password, setPassword] = useState('qwerty12345');
 
-  const { isAuthenticated, login } = useAuth();
+  const { isAuthenticated, login, loginError, wrongCredentials } = useAuth();
+  const FAKE_USER = useAuth().FAKE_USER;
+
   const navigate = useNavigate();
 
   useEffect(
@@ -22,13 +25,20 @@ export default function Login() {
 
   function handleSubmit(e) {
     e.preventDefault();
-
-    if (email && password) login(email, password);
+    if (email && password) {
+      if (email === FAKE_USER.email && password === FAKE_USER.password) {
+        login(email, password);
+      } else {
+        loginError();
+        console.log('Login Error');
+      }
+    }
   }
 
   return (
     <main className={styles.login}>
       <PageNav />
+      {wrongCredentials ? <Message message="Wrong credentials" /> : ''}
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.row}>
           <label htmlFor="email">Email address</label>
